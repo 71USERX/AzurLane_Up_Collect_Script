@@ -1,7 +1,5 @@
 import functions as fns
-import variable as var
 
-import time
 import threading
 
 # *********************************************************
@@ -12,9 +10,9 @@ import threading
 # 自行写一下代码好了，我也不敢保证我的需求是不是一定符合你的需求。
 # 函数的作用我已经在functions.py里注释好了
 # ---------------------------------------------------------
-# 下面提供的是最简单的(也是一次性的)的实现
-# 至于为什么把python写得和C一样呢，因为我是
-# 刚从C转到python，所以很多东西不习惯。
+# 下面提供的是最简单的实现
+# 至于为什么把python的for写得和C一样呢，
+# 因为我是刚从C转到python，所以很多东西不习惯。
 # *********************************************************
 
 def main():
@@ -32,8 +30,13 @@ def main():
     fns.writeToFile()
 
     thread_find_in  = fns.find_name_in_thread_class()
+    thread_find_seq = fns.find_name_seq_thread_class()
     thread_find_in.start()    
+    thread_find_seq.start()
     thread_find_in.join()
+    thread_find_seq.join()
+
+    fns.writeNames()
 
     fns.makeMarkdown()
 

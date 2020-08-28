@@ -18,8 +18,7 @@ UsrPage = "https://space.bilibili.com/"
 regeX = re.compile(r'"mid":.\d+,')
 
 # 查找昵称所用的正则
-# 鬼知道为啥直接r'"name":"\S+",'会匹配到一大串无关的字符，希望有大佬能解释一下
-nameRegeX = re.compile(r'"name":"\S+","sex":')
+nameRegeX = re.compile(r'"name":"\S+?",')
 
 # 已查找到的所有uid
 uids = []
@@ -27,3 +26,5 @@ uids = []
 # 线程临时存放uid的列表
 thread_in = []
 thread_seq = []
+finder_in = []
+finder_seq = []

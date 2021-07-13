@@ -20,6 +20,9 @@ regeX = re.compile(r'"mid":.\d+,')
 # 查找昵称所用的正则
 nameRegeX = re.compile(r'"name":"\S+?",')
 
+# 等待时间
+waitingTime = 5
+
 # 已查找到的所有uid
 uids = []
 

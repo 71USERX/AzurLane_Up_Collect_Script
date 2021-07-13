@@ -148,7 +148,7 @@ def inverted_thread():
         var.thread_in.extend(new_uid)
         print("Thread_in:page " + str(i) +" Processed.")
         i += 1
-        time.sleep(5) 
+        time.sleep(var.waitingTime) 
 
 #倒序线程主函数，查找26-50页的所有搜索结果
 # 参数 无参数
@@ -162,7 +162,7 @@ def sequential_thread():
         var.thread_seq.extend(new_uid)
         print("Thread_seq:page " + str(i) +" Processed.")
         i -= 1
-        time.sleep(5) 
+        time.sleep(var.waitingTime) 
 
 #查找昵称线程主函数，将所有的uid匹配昵称并写入variable.py里的finder_*.py中
 # 参数 无参数
@@ -175,7 +175,7 @@ def find_name_in_thread():
         var.finder_in.append(name)
         print("Finder_in:The no. "+ str(i) + " is " + name)
         i += 1
-        time.sleep(5)
+        time.sleep(var.waitingTime)
 
 #倒序查找昵称
 def find_name_seq_thread():
@@ -186,7 +186,7 @@ def find_name_seq_thread():
         var.finder_seq.append(name)
         print("Finder_seq:The no. "+ str(i) + " is " + name)
         i -= 1
-        time.sleep(5)
+        time.sleep(var.waitingTime)
 
 #顺序线程类
 # 参数 无参数
